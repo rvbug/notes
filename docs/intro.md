@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Notes in less than 5 minutes**.
+Let's discover **Notes in less than 5 minutes and here is the change**.
 
 ## Getting Started
 
