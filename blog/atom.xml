@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qubitai.in/notes/blog"/>
     <subtitle>QuBiTAi Blog</subtitle>
-    <icon>https://qubitai.in/notes/img/favicon.ico</icon>
+    <icon>https://qubitai.in/notes/img/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[First Blog Post]]></title>
         <id>https://qubitai.in/notes/blog/first-blog-post</id>
