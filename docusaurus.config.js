@@ -14,6 +14,7 @@ const config = {
   tagline: 'System Design, ML and More',
   favicon: 'img/logo.png',
 
+
   // Set the production url of your site here
   url: 'https://qubitai.in',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -152,4 +153,8 @@ const config = {
     }),
 };
 
+
 export default config;
+
+
+
