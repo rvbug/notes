@@ -2,46 +2,18 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome
 
-Let's discover **Notes in less than 5 minutes and here is the change**.
+Welcome to **QuBiTAi** documentation section. You will find lot of intresting notes which I have gathered over many years.
 
-## Getting Started
+# Getting Started
 
-Get started by **creating a new site**.
+It's easy, on the left side of the pane, you will see various sections, click the topic of your interest and follow them. If you find this intresting, do share it with others.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+# Thank you
 
-## Generate a new site
+A big thank you to everyone who has helped me to gain this knowledge. This is my attempt to give it back to the community
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+You can go back to my [QuBiTAi](https://qubitai.in) site or continue to explore my Documentation and Blogs

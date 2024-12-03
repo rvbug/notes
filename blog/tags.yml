@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
 hello:
   label: Hello
   permalink: /hello
   description: Hello tag description
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+welcome:
+  label: welcome
+  permalink: /welcome
+  description: welcome tag description
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+docusaruas:
+  label: docusaruas
+  permalink: /docusaruas
+  description: introduction
+
+nix:
+  label: nix
+  permalink: /nix
+  description: Nix OS and Functional Package Manager
