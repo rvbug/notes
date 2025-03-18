@@ -10,7 +10,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Clik on "Tutorials" for Notes Section.
+        Coming Soon.
       </>
     ),
   },

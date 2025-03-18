@@ -1,5 +1,5 @@
 ---
-slug: Nix
+slug: Nix Pkgs
 title: Nix Pkg Manager
 authors: [rakesh]
 tags: [nix]

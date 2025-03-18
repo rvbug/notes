@@ -1,3 +1,10 @@
+---
+slug: Nix
+title: Nix Introduction
+authors: [rakesh]
+tags: [nix]
+---
+
 # Nix Functional Programming
 
 
