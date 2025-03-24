@@ -13,6 +13,8 @@ Docusaurus is an open-source static site generator specifically designed for cre
 
 <!-- truncate -->
 
+---
+
 # What is Docusaurus?
 Docusaurus is a modern static website generator that helps developers and teams create, build, and publish documentation websites quickly and efficiently. It leverages React and provides a clean, customizable interface with built-in features that make documentation management seamless.
 

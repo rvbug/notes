@@ -1,11 +1,17 @@
 ---
-slug: Nix
+slug: Nix OS
 title: Nix Introduction
 authors: [rakesh]
 tags: [nix]
 ---
 
 # Nix Functional Programming
+
+Introduction to Nix Functional programming
+
+<!-- truncate -->
+
+---
 
 
 ##  Core Concepts

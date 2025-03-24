@@ -1,12 +1,19 @@
 ---
-slug: Nix Pkgs
+slug: Nix Packages
 title: Nix Pkg Manager
 authors: [rakesh]
 tags: [nix]
 ---
 
 # Introduction
-Nix is a powerful, purely functional package manager that provides a unique approach to software deployment and system configuration. Unlike traditional package managers, Nix focuses on:
+Nix is a powerful, purely functional package manager that provides a unique approach to software deployment and system configuration. 
+
+<!-- truncate -->
+---
+
+
+
+Unlike traditional package managers, Nix focuses on:
 
 >-  Reproducibility  
 >-  Atomic upgrades and rollbacks  

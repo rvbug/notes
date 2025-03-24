@@ -10,6 +10,10 @@ tags: [Quantum Gravity]
 
 When Christopher Nolan's film "Interstellar" hit theaters, it wasn't just another sci-fi movie—it was a scientifically rigorous exploration of some of the most mind-bending concepts in modern physics. Behind the film's stunning visuals was renowned theoretical physicist Kip Thorne, who ensured that the movie's scientific foundations were as accurate as possible.
 
+<!-- truncate -->
+
+---
+
 ## Black Holes: Cosmic Enigmas
 
 One of the most fascinating aspects of the book is its deep dive into black holes. Thorne explains these cosmic phenomena not as simple "cosmic vacuum cleaners," but as complex gravitational systems that warp the very fabric of spacetime.
