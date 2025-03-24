@@ -1,5 +1,5 @@
 ---
-slug: Introduction
+slug: QuantumGravity
 title: Quantum Gravity - Intestellar 
 authors: [rakesh]
 tags: [Quantum Gravity]
