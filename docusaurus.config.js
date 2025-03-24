@@ -83,6 +83,7 @@ const config = {
         logo: {
           alt: 'qubit',
           src: 'img/logo.png',
+          href: 'https://qubitai.in',
         },
         items: [
           {
