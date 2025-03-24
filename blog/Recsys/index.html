@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.1">
+<title data-rh="true">Recommendation System | QuBiTAi</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://qubitai.in/notes/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://qubitai.in/notes/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://qubitai.in/notes/blog/Recsys"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Recommendation System | QuBiTAi"><meta data-rh="true" name="description" content="---"><meta data-rh="true" property="og:description" content="---"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2022-09-10T00:00:00.000Z"><meta data-rh="true" property="article:author" content="https://qubitai.in"><meta data-rh="true" property="article:tag" content="ML"><link data-rh="true" rel="icon" href="/notes/img/logo.png"><link data-rh="true" rel="canonical" href="https://qubitai.in/notes/blog/Recsys"><link data-rh="true" rel="alternate" href="https://qubitai.in/notes/blog/Recsys" hreflang="en"><link data-rh="true" rel="alternate" href="https://qubitai.in/notes/blog/Recsys" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://qubitai.in/notes/blog/Recsys","mainEntityOfPage":"https://qubitai.in/notes/blog/Recsys","url":"https://qubitai.in/notes/blog/Recsys","headline":"Recommendation System","name":"Recommendation System","description":"---","datePublished":"2022-09-10T00:00:00.000Z","author":{"@type":"Person","name":"rakesh","description":"Sr. Engineering Manager","url":"https://qubitai.in","image":"https://avatars.githubusercontent.com/u/10928536?v=4"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://qubitai.in/notes/blog","name":"Blog"}}</script><link rel="alternate" type="application/rss+xml" href="/notes/blog/rss.xml" title="QuBiTAi RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/notes/blog/atom.xml" title="QuBiTAi Atom Feed"><link rel="stylesheet" href="/notes/assets/css/styles.ff77200d.css">
+<script src="/notes/assets/js/runtime~main.ca156a71.js" defer="defer"></script>
+<script src="/notes/assets/js/main.25ba9a04.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://qubitai.in" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/notes/img/logo.png" alt="qubit" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/notes/img/logo.png" alt="qubit" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">QuBitAi</b></a><a class="navbar__item navbar__link" href="/notes/docs/intro">Tutorial</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/notes/blog">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/rvbug" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Recent posts</div><div role="group"><h3 class="yearGroupHeading_rMGB">2025</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/LLMs">LLM Overview</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/GPU">Graphics Processing Unit (GPU)</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/PTXIntro">PTX Basics</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/DeepSeekPTX">PTX Optimization</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2024</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/dotfiles">Dotfiles</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/Neovim">Neovim IDE</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/QuantumML">Quantum Machine Learning</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/CookieCutterML">Cookie ML</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/QuantumGravity">Quantum Gravity - Intestellar</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2023</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/Nix OS">Nix Introduction</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/Nix Packages">Nix Pkg Manager</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2022</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/ecpe">Emotional Cause Pair Analysis</a></li><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/notes/blog/Recsys">Recommendation System</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/Cookiever1">Cookie Cutter Version 1.0</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/dsml">Data Science and ML Structure</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2021</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/Notion">Notion Introduction</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2020</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/Intro to Docusaurus">Introduction to Docusaurus</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/notes/blog/welcome">Welcome</a></li></ul></div></nav></aside><main class="col col--7"><article><header><h1 class="title_f1Hy">Recommendation System</h1><div class="container_mt6G margin-vert--md"><time datetime="2022-09-10T00:00:00.000Z">September 10, 2022</time> · <!-- -->9 min read</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--12 authorCol_Hf19"><div class="avatar margin-bottom--sm"><a class="avatar__photo-link" href="/notes/blog/authors/rakesh"><img class="avatar__photo authorImage_XqGP" src="https://avatars.githubusercontent.com/u/10928536?v=4" alt="rakesh"></a><div class="avatar__intro authorDetails_lV9A"><div class="avatar__name"><a href="/notes/blog/authors/rakesh"><span class="authorName_yefp">rakesh</span></a></div><small class="authorTitle_nd0D" title="Sr. Engineering Manager">Sr. Engineering Manager</small><div class="authorSocials_rSDt"><a href="https://qubitai.in" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="w"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="authorSocialLink_owbf"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path><path d="M3.6 9h16.8"></path><path d="M3.6 15h16.8"></path><path d="M11.5 3a17 17 0 0 0 0 18"></path><path d="M12.5 3a17 17 0 0 1 0 18"></path></svg></a><a href="https://github.com/rvbug" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="GitHub"><svg viewBox="0 0 256 250" width="1em" height="1em" class="authorSocialLink_owbf githubSvg_Uu4N" xmlns="http://www.w3.org/2000/svg" style="--dark:#000;--light:#fff" preserveAspectRatio="xMidYMid"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg></a></div></div></div></div></div></header><div id="__blog-post-container" class="markdown"><hr>
+<h1>Introduction</h1>
+<p>This is the first article of a multi-part series on building Recommendation Systems (RS).</p>
+<p>In Part 1, we will cover the two types - Popularity Based and Content Based recommenders. Objective of the article is to share my learnings and experiences using a public dataset.</p>
+<hr>
+<h1>What are Recommendation Systems</h1>
+<hr>
+<p>It&#x27;s a <strong>Information Filtering</strong> system for providing relevant suggestions to users based on their interactions.  It aids our decision making process, things to buy, movies to watch, out of billions of items out there.</p>
+<p>It is perfected by Google, Amazon, Netflix and many other companies. They use various user features (location, demographics, etc) and item features (video length, type etc) to understand user preferences and made billions of dollars perfecting this system.</p>
+<p>For example, you open your music app like Spotify and listen to a song  <em><code>Wasted Years</code></em> from <strong><code>Iron Maiden</code></strong>. It understands your taste in heavy metal music, uses NLP to process lyrics, calculates song&#x27;s acoustics and assesses your mood to recommend similar songs. The more you interact, the perfect it becomes!</p>
+<p>I have often heard of people spending hours watching funny or cat videos , recommendation is to blame isn&#x27;t it :) .</p>
+<hr>
+<h1>Prerequisites</h1>
+<hr>
+<ul>
+<li>Dataset used - <a href="https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv" target="_blank" rel="noopener noreferrer">TMDB 5000</a> because it is easier to relate. You can choose any dataset to implement these systems.</li>
+<li>It is the almost perfect publicly available dataset as using the real world dataset is not possible.</li>
+<li>In real world, the data needs to go through lot of clean-up process (preprocessing stage).</li>
+<li>Great deal of time needs to be spent on understanding the data via Exploratory Data Analysis (EDA) &amp; Feature Engineering (FE)</li>
+<li>If you do not want to install any tools on your machine, you can use either :<!-- -->
+<ul>
+<li><a href="https://kaggle.com" target="_blank" rel="noopener noreferrer">Kaggle</a> - This is where most action happens in the world of  ML</li>
+<li><a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab</a>  - Google gives you free access to CPU and GPU</li>
+</ul>
+</li>
+<li>If you are building a real world application - using an IDE (VS Code or Pycharm) is a good option.<br>
+<code>Tip: Here&#x27;s link to my blog on structuring real world ML projects</code> - <a href="https://rvbug.hashnode.dev/ml-cookie-cutter" target="_blank" rel="noopener noreferrer">link</a></li>
+</ul>
+<hr>
+<h1>Dataset</h1>
+<p>This dataset contains two files which are merged into one DataFrame (Pandas data structure).</p>
+<ul>
+<li>Movies - Details of movies like title, id etc</li>
+<li>Credits - Details of Cast, Crew and other metadata info</li>
+</ul>
+<p>The below image shows the columns available and its data types -<code>df</code> is a dataframe</p>
+<p><img decoding="async" loading="lazy" alt="dataset" src="/notes/assets/images/dataset-d21cee247831679d77e7ae8e6fe2f1be.png" width="1321" height="637" class="img_ev3q"></p>
+<p><code>Tip: EDA and FE takes up around 80% of your time, this is to understand the data and what story is it trying to tell</code></p>
+<blockquote>
+<p>Become one with the data, my friend...</p>
+</blockquote>
+<hr>
+<h1>Types</h1>
+<p><img decoding="async" loading="lazy" alt="overview" src="/notes/assets/images/overview-c72809cd4933f71bd01944e18bd71a3d.png" width="1528" height="540" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a--popularity-based">A&gt;  Popularity Based<a href="#a--popularity-based" class="hash-link" aria-label="Direct link to A&gt;  Popularity Based" title="Direct link to A&gt;  Popularity Based">​</a></h2>
+<p>This is a formula based recommendation system and implementation varies from company to company. Few articles classify this type as part of Collaborative filtering but I like to keep it separate.</p>
+<p>In <a href="https://www.imdb.com/chart/top/" target="_blank" rel="noopener noreferrer">IMDB</a>, the movie ratings are not just simple average ratings given by casual users, but it takes into account <code>weights</code>  i.e. users who are industry professionals, or who has provided more than 50+ ratings.</p>
+<p><code>Tip - Data Science and ML is more of an art than science. The implementation can vary depending on what problem are you trying to solve</code></p>
+<p>The formula used for calculating the ratings \(W\) is as follows:-</p>
+<p><img decoding="async" loading="lazy" alt="weights" src="/notes/assets/images/weight-3ce50a081ee195c15eb2dcdae54adeb9.png" width="482" height="186" class="img_ev3q"></p>
+<p>Where:<br>
+<!-- -->\(R\) :- Average rating of a movie (Ranges from 1 to 10)<br>
+<!-- -->\(v\) :- Number of votes  i.e. how many users have given rating for a movie<br>
+<!-- -->\(m\) :- Minimum votes required to be listed (more than 70 Percentile)<br>
+<!-- -->\(C\) :- Mean votes for entire dataset</p>
+<p><img decoding="async" loading="lazy" alt="SampleData" src="/notes/assets/images/weightcalcpy-19c2b057284f608bc31538721bbaa927.png" width="1252" height="266" class="img_ev3q"></p>
+<p>This column is now available  showing weighted average ratings.</p>
+<p><img decoding="async" loading="lazy" alt="output" src="/notes/assets/images/weightedoutput-ddd91db195fe6fa2968ab9dda61fecf5.png" width="1230" height="592" class="img_ev3q"></p>
+<p>For YouTube, Twitter and other similar platforms, the implementation might be quite different - it could be based on likes, views, time spent and many other factors.</p>
+<p><code>Pro Tip: In one of the project I had to derive a method to calculate popularity.</code></p>
+<p>If you sort this weighted average in descending order and pick the first 20, here&#x27;s what you will get.</p>
+<p><img decoding="async" loading="lazy" alt="sorted" src="/notes/assets/images/sort-652a0e73e4563753508da8426f5c8889.png" width="1800" height="1308" class="img_ev3q"></p>
+<p><code>Note: In this dataset, there is an additional column called popularity, you could also sort the ratings according to this field and have a mix of both weighted average and popularity score. In real world, this field might not be available so you will have to come up with your own calculations.</code></p>
+<p>Image below shows the popularity which is not sorted yet</p>
+<p><img decoding="async" loading="lazy" alt="Notsorted" src="/notes/assets/images/notsorted-2f1c5dfbbea46d1f09a3053e64848e13.png" width="1952" height="1278" class="img_ev3q"></p>
+<p><code>Pro tip: The scale of weighted_avg and popularity column is  different, so transformation is applied to bring them down to same scale using - </code> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html" target="_blank" rel="noopener noreferrer">MinMaxScaler</a></p>
+<p>MinMaxScalar normalizes the features and transforms the numbers between \([0, 1]\) using the formula:-</p>
+<p><img decoding="async" loading="lazy" alt="minmax" src="/notes/assets/images/minmax-13e7dc282d997ac946e4f64ebb175d95.png" width="560" height="210" class="img_ev3q"></p>
+<p>Where :<br>
+<!-- -->\( x_n\) = Minimum value of x<br>
+<!-- -->\( x_m\) = Max value of x</p>
+<p>The last two columns are now scaled.</p>
+<p><img decoding="async" loading="lazy" alt="scaled" src="/notes/assets/images/scaled-c0b445c3a5f7366b4a0d615e4a0cd00b.png" width="2358" height="1424" class="img_ev3q"></p>
+<p>This scaled columns can then multiplied by a factor depending on your requirements.</p>
+<p>For example, multiply a factor of 0.4 (40%) on popularity and 0.6 (60%) on weighted_avg to extract the top 20 list again. You can even keep it equal on 0.5 (50%) each.</p>
+<p><code>Note: Depending on your application and requirements, you can show top five or ten items too</code></p>
+<p>When a new user logs in to your application, their preferences are unknown - this is called <code>Cold Start</code> problem so showing most popular items in your application the very first time they visit will get the interaction started.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="b-content-based-filtering">B&gt; Content Based Filtering<a href="#b-content-based-filtering" class="hash-link" aria-label="Direct link to B&gt; Content Based Filtering" title="Direct link to B&gt; Content Based Filtering">​</a></h2>
+<p>It is a form of filtering for recommending items to a user based on their past interaction with similar items. We will talk about calculating <code>similarity</code> shortly!</p>
+<p>Let us take our movie dataset  - if the user has watched <code>Inception</code> then based on the data available about the movie e.g. director, cast, plot, keywords and crew, you can filter similar movies and recommend them. i.e. similarity is based on metadata of the item.</p>
+<p>Here is the what the data shows for Inception :-</p>
+<p><img decoding="async" loading="lazy" alt="inception" src="/notes/assets/images/inception-3a8b5581d150ad33af55443808239fb7.png" width="2762" height="358" class="img_ev3q"></p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h3>
+<p>We will be selecting only few columns. You can always add other features like budget, release_date, runtime, tagline etc to see how your model is performing.</p>
+<p><img decoding="async" loading="lazy" alt="Features" src="/notes/assets/images/features-2898e6767279faffb8c87a7b4600e83b.png" width="2702" height="976" class="img_ev3q"></p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-review">Data Review<a href="#data-review" class="hash-link" aria-label="Direct link to Data Review" title="Direct link to Data Review">​</a></h3>
+<p>Let us review the data in each of the columns like below.</p>
+<p>1st movie in this dataset is <code>Avatar</code></p>
+<p><img decoding="async" loading="lazy" alt="Avatar" src="/notes/assets/images/avatar-f904cdc093d7b3f235fc579aff930e8e.png" width="1580" height="294" class="img_ev3q"></p>
+<p>Genres :-</p>
+<p><img decoding="async" loading="lazy" alt="Genres" src="/notes/assets/images/generes-22cebe73d7c0e968837cb24f49649727.png" width="1602" height="294" class="img_ev3q"></p>
+<p>Keywords :-</p>
+<p><img decoding="async" loading="lazy" alt="Keywords" src="/notes/assets/images/keywordoutput-c61250ba5453ebaf2b496a7168808d74.png" width="2026" height="788" class="img_ev3q"></p>
+<p>Crew details are as shown below but we will extract only Director from this list</p>
+<p><img decoding="async" loading="lazy" alt="crew" src="/notes/assets/images/crew-43d5eb291087de341924c9a7915f867c.png" width="2074" height="1220" class="img_ev3q"></p>
+<p><code>Pro Tip: What you select as a feature depends on the problem and the data available, you might have to create a new feature based on the existing ones or transform certain features too</code></p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="processing">Processing<a href="#processing" class="hash-link" aria-label="Direct link to Processing" title="Direct link to Processing">​</a></h3>
+<p>Next step is to process the data and create a list. We will create a function to process genres, keywords, cast and crew. For crew column, extract only job role as director.</p>
+<p><img decoding="async" loading="lazy" alt="Processing" src="/notes/assets/images/Processing-84e28ee9750baaa0de3bc50c2c900a89.png" width="2270" height="944" class="img_ev3q"></p>
+<p>There are few additional steps to be done :-</p>
+<ul>
+<li>Drop and keep only relevant columns</li>
+<li>Remove spaces from cast and crew</li>
+<li>Concatenate all fields except cast and crew</li>
+<li>Convert to lowercase</li>
+<li>Finally, remove stopwords</li>
+</ul>
+<p>After processing the dataframe will look something like this.
+<a href="/notes/assets/files/head-84b86e2af1f54f3ce3d88e8a303d87c0.png" target="_blank">text</a></p>
+<p>Sample data :-</p>
+<p><img decoding="async" loading="lazy" alt="SampleData" src="/notes/assets/images/sampledata-c5d55ea944062dd66235e1009641c843.png" width="2672" height="428" class="img_ev3q"></p>
+<p>This was the easiest part :)</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="text-vectorizer">Text Vectorizer<a href="#text-vectorizer" class="hash-link" aria-label="Direct link to Text Vectorizer" title="Direct link to Text Vectorizer">​</a></h3>
+<p>We went through lot of preprocessing steps in the last section to extract strings.  Strings will be converted into vectors - a step known as <code>Text Vectorizer</code>. Closer these vectors are to each other in a multidimensional space, the more similar they are. Some of the techniques to convert are :-</p>
+<ol>
+<li>Bag of Words(BoW)</li>
+<li>TF-IDF</li>
+<li>Word2Vec</li>
+</ol>
+<p>We will use Tf-IDF in this article.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tf-idf">TF-IDF<a href="#tf-idf" class="hash-link" aria-label="Direct link to TF-IDF" title="Direct link to TF-IDF">​</a></h3>
+<p>Term Frequency Inverse Document Frequency or TF-IDF is a statistical method widely used in Information Retrieval systems and also to rank the relevance of documents in search engines.</p>
+<p>It gives importance to a word which occurs most frequently in a document and frequency of this same word rarely occurring in an entire corpus - A kind of a push-pull mechanism. You can read more about it <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf" target="_blank" rel="noopener noreferrer">here</a></p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="similarity">Similarity<a href="#similarity" class="hash-link" aria-label="Direct link to Similarity" title="Direct link to Similarity">​</a></h3>
+<p>Once you have the data in a vectorized format, next step is to calculate the distance of every movie with each other. This can be achieved either by</p>
+<ul>
+<li>Euclidian Distance  - It fails in a very high dimensional space.</li>
+<li>Cosine Distance - Calculate angle between the movie vectors. Movies will be similar if the angle between them is similar.</li>
+</ul>
+<p>Use sklearn&#x27;s [cosine distance]<img decoding="async" loading="lazy" alt="Cosine" src="/notes/assets/images/cosine-241aee51eda1bed389aaf8ea83a6a37a.png" width="1956" height="926" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Shape" src="/notes/assets/images/shape-3ddd5f777049a305c178ff211f626154.png" width="1696" height="666" class="img_ev3q"></p>
+<p><code>Pro-tip: These libraries are designed to make our life easy - but understanding how and why it works at an intuitive level will help you pick up more complex and state-of-the-art implementations as you move forward in your ML jouney</code></p>
+<p>This is how the data looks :-</p>
+<ul>
+<li>Shape is 4800 x 4800 - calculate the similarity of every movie with every other movie</li>
+<li>Sample record - Shows 10th Record which has shape of 1 row with 4800 columns-</li>
+</ul>
+<p>![Screenshot 2022-09-09 at 3.01.41 PM.png](<a href="https://cdn.hashnode.com/res/hashnode/image/upload/v1662716299360/HK073c-cJ.png" target="_blank" rel="noopener noreferrer">https://cdn.hashnode.com/res/hashnode/image/upload/v1662716299360/HK073c-cJ.png</a> align=&quot;left&quot;)</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="recommendations">Recommendations<a href="#recommendations" class="hash-link" aria-label="Direct link to Recommendations" title="Direct link to Recommendations">​</a></h3>
+<p>Here&#x27;s the function to recommend movies.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="/notes/assets/images/recommend-dcc27a3baa396e70d4f0f1a052751820.png" width="2336" height="402" class="img_ev3q"></p>
+<p>All set! Let&#x27;s see how the model performs.</p>
+<p>Searching for Batman</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="/notes/assets/images/batman-e45589e50c18684920fcbbcac4e7e64d.png" width="902" height="356" class="img_ev3q"></p>
+<p>James Bond</p>
+<p><img decoding="async" loading="lazy" alt="die" src="/notes/assets/images/die-893755f117fc1b9b7292388117f68299.png" width="984" height="344" class="img_ev3q"></p>
+<p>Testing on couple of my favorite movies :</p>
+<p><img decoding="async" loading="lazy" alt="spotlight" src="/notes/assets/images/spotlight-18826bcee403fb90e10cd1bc5024ecfe.png" width="988" height="388" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Clayton" src="/notes/assets/images/Clayton-0dc6dbb160cc12a286b4f00338f3b7ee.png" width="958" height="376" class="img_ev3q"></p>
+<p>Seems to be pretty decent. You can also use additional metadata or try Word2Vec to see how accurately this model performs.</p>
+<hr>
+<h1>Conclusion</h1>
+<p>In this article we covered what are Recommendation Systems, their types, looked at Popularity and Content based systems. In the next article we will take a look at most widely used Collaborative filtering. Stay tuned!!</p>
+<p>Credit goes to amazing people who have been patiently answering my questions and publishing some great content out there from where I learnt so many things.</p>
+<p>You can download the dataset <a href="https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata" target="_blank" rel="noopener noreferrer">here</a></p>
+<p>Code is available at :</p>
+<p><a href="https://github.com/rvbug/RecommendationSystems" target="_blank" rel="noopener noreferrer">Github</a><br>
+<a href="https://kaggle.com/rvbugged/content-based" target="_blank" rel="noopener noreferrer">Kaggle - Content Based</a><br>
+<a href="https://kaggle.com/rvbugged/popularity-based" target="_blank" rel="noopener noreferrer">Kaggle - Popularity Based </a></p>
+<p>You can find me on <a href="https://www.linkedin.com/in/idinc/" target="_blank" rel="noopener noreferrer">Linkedln</a> and <a href="https://twitter.com/rvbugged" target="_blank" rel="noopener noreferrer">Twitter</a>.</p></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/notes/blog/tags/ml">ML</a></li></ul></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--prev" href="/notes/blog/ecpe"><div class="pagination-nav__sublabel">Newer post</div><div class="pagination-nav__label">Emotional Cause Pair Analysis</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/notes/blog/Cookiever1"><div class="pagination-nav__sublabel">Older post</div><div class="pagination-nav__label">Cookie Cutter Version 1.0</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#a--popularity-based" class="table-of-contents__link toc-highlight">A&gt;  Popularity Based</a></li><li><a href="#b-content-based-filtering" class="table-of-contents__link toc-highlight">B&gt; Content Based Filtering</a><ul><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li><li><a href="#data-review" class="table-of-contents__link toc-highlight">Data Review</a></li><li><a href="#processing" class="table-of-contents__link toc-highlight">Processing</a></li><li><a href="#text-vectorizer" class="table-of-contents__link toc-highlight">Text Vectorizer</a></li><li><a href="#tf-idf" class="table-of-contents__link toc-highlight">TF-IDF</a></li><li><a href="#similarity" class="table-of-contents__link toc-highlight">Similarity</a></li><li><a href="#recommendations" class="table-of-contents__link toc-highlight">Recommendations</a></li></ul></li></ul></div></div></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/notes/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title"></div><ul class="footer__items clean-list"></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/notes/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/rvbug" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 QuBiTAi, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
