@@ -293,7 +293,7 @@ Optimize data layout for shared memory.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://qubitai.in/notes/blog/DeepSeekPTX#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>This article has outlined potential PTX optimizations employed by DeepSeek. These optimizations highlight DeepSeek's impressive ability to leverage fundamental hardware optimization, enabling them to develop models that effectively compete with OpenAI. The difficulty of these low level optimizations cannot be overstated.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="next">Next<a href="https://qubitai.in/notes/blog/DeepSeekPTX#next" class="hash-link" aria-label="Direct link to Next" title="Direct link to Next">​</a></h2>
-<p>n my next article, we will get into the details of how these optimizations happen in various stages of the architecture, from MHLA to Multi-token.</p>
+<p>In my next article, we will get into the details of how these optimizations happen in various stages of the architecture, from MHLA to Multi-token.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a href="https://qubitai.in/notes/blog/DeepSeekPTX#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References">​</a></h2>
 <p><a href="https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf" target="_blank" rel="noopener noreferrer">DeepSeek R1</a><br>
 <a href="https://github.com/deepseek-ai/DeepEP" target="_blank" rel="noopener noreferrer">DeepSeek EP Github</a></p>]]></content:encoded>
