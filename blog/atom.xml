@@ -1530,9 +1530,10 @@ The core of Nix's package management:</p>
         <id>https://qubitai.in/notes/blog/welcome</id>
         <link href="https://qubitai.in/notes/blog/welcome"/>
         <updated>2020-03-05T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to my blog site which is hosted on QuBiTAi using Docusaurus.]]></summary>
-        <content type="html"><![CDATA[<p>Welcome to my blog site which is hosted on <a href="https://qubitai.in/" target="_blank" rel="noopener noreferrer">QuBiTAi</a> using Docusaurus.</p>
-<hr>]]></content>
+        <summary type="html"><![CDATA[Welcome to my blog, a space dedicated to exploring the frontiers of technology and science.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to my blog, a space dedicated to exploring the frontiers of technology and science.</p>
+<p>Dive into various in-depth articles on <strong><code>Machine Learning</code></strong>, <strong><code>Quantum Computing</code></strong>, fascinating architecture of <strong>DeepSeek</strong> and much more.</p>
+<p>Powered by <a href="https://qubitai.in/" target="_blank" rel="noopener noreferrer">QuBiTAi</a> and built with Docusaurus, this platform is your gateway to understanding complex concepts and cutting-edge research.</p>]]></content>
         <author>
             <name>rakesh</name>
             <uri>https://qubitai.in</uri>
