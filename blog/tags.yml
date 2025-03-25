@@ -17,3 +17,38 @@ nix:
   label: nix
   permalink: /nix
   description: Nix OS and Functional Package Manager
+
+ML Research:
+  label: ML Reserach
+  permalink: /ML-Research
+  description: Machine Learning Research
+
+ML:
+  label: ML
+  permalink: /ML
+  description: Machine Learning
+
+IDE:
+  label: IDE
+  permalink: /IDE
+  description: Integrated Development Environment
+
+Neovim:
+  label: Neovim
+  permalink: /Neovim
+  description: Neovim
+
+Notion:
+  label: Notion
+  permalink: /Notion
+  description: Notion
+
+dotfiles:
+  label: dotfiles
+  permalink: /dotfiles
+  description: dotfiles
+
+Quantum:
+  label: Quantum Computing
+  permalink: /Quantum-Computing
+  description: Quantum Computing

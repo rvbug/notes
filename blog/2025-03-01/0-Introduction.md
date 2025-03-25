@@ -9,11 +9,9 @@ side_position: 1
 
 
 ## Large Language Models
-OpenAI has been in the forefront of developing a sophisticated LLMs which was a blockbox until DeepSeek came along and they open sourced their LLMs, give us a peek into what happens behind the scenes.
-This is a series of blogs covering all the in components of DeepSeek including their architecture, optimization and my experiences in going through their research papers.
+OpenAI has been at the forefront of developing sophisticated LLMs, often perceived as black boxes. 1  Until DeepSeek's open-source release, that is. Now, we have a unique opportunity to peek behind the curtain. In this series of articles, I have tried to delve into the inner workings of DeepSeek's LLMs, covering their architecture, optimization techniques. Here are some of my notes exploring their research papers.
 
 <!-- truncate -->
-
 ---
 
 
@@ -24,13 +22,21 @@ DeepSeek leverages techniques like "Mixture of Experts (MoE)"  to optimize resou
 
 ## Impact
 
-DeepSeek's success has put pressure on established AI companies to reconsider their development strategies and by democratizing their AI technology, it has made these models making it more accessible to smaller organizations and developing nations.
+DeepSeek's success has put pressure on established AI companies to reconsider their development strategies and by democratizing their AI technology, it has made these models more accessible to smaller organizations and developing nations.
 
-They developed a model much more (or similar) powerful than OpenAI with significantly less resource. DeepSeek's rise signifies a shift towards more efficient and accessible AI, challenging the dominance of OpenAI.
+They developed a model much more powerful (or similar) than OpenAI with significantly less resource. DeepSeek's rise signifies a shift towards more efficient and accessible AI, challenging the dominance of OpenAI.
 
 ## My Motivation
 
 DeepSeek's achievement, building a powerful model with optimized resources, resonates deeply. It's a testament to human ingenuity, a reminder that constraints often spark the most innovative solutions. When faced with limitations, we have an incredible ability to find efficient, impactful pathways forward.
+
+
+
+> *We've always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to reach for the stars, to make the unknown known. We count these moments as our proudest achievements. But we lost all that. Or perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, because our destiny lies above us.*
+
+**Cooper, (Movie - Interstellar)**
+
+
 
 
 ## Components
@@ -50,8 +56,9 @@ Here are the some of the components used by DeepSeek
 ![Overview](./img/LLMWorkflow.png)
 
 
-# Blog Series
-This is a series of blog which gives you enough to start on the research journey of LLMs. We will start with quick introduction and overview of major components and writing equivalent rust code since my mission is to work on an unified programming language be it  Web Development, CLI programs, Systems Programming, Embedded systems and Robotics. Feel free to use Python. 
+# Conclusion
+
+This blog series **(converted from my research notes)** will provide a glimpse into the architecture and optimization of DeepSeek's LLMs, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology. 
 
 Enjoy your reading!
 

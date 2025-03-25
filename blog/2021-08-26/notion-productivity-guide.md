@@ -2,11 +2,11 @@
 slug: Notion
 title: Notion Introduction
 authors: [rakesh]
-tags: [notion]
+tags: [Notion]
 ---
 
 # What is Notion 
-
+  
 
 <!-- truncate -->
 
