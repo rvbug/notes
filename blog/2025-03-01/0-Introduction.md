@@ -36,8 +36,8 @@ DeepSeek's achievement, building a powerful model with optimized resources, reso
 
 **Cooper, (Movie - Interstellar)**
 
-
-
+## LLM Stages
+![alt text](img/LLMStages.png)
 
 ## Components
 
@@ -53,7 +53,19 @@ Here are the some of the components used by DeepSeek
 
 > GPU Optimization via PTX  
 
-![Overview](./img/LLMWorkflow.png)
+![Overview](img/Llmdetails.png)
+
+## Simple Transformers and Attention
+
+![alt text](img/simpleTransormers.png)
+
+![alt text](<img/selfAttention .png>)
+
+## Autoregression Models
+
+![alt text](img/AutoregressiveModel.png)
+
+
 
 
 # Conclusion
