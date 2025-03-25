@@ -29,6 +29,8 @@
 <p><em>We've always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to reach for the stars, to make the unknown known. We count these moments as our proudest achievements. But we lost all that. Or perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, because our destiny lies above us.</em></p>
 </blockquote>
 <p><strong>Cooper, (Movie - Interstellar)</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="llm-stages">LLM Stages<a href="https://qubitai.in/notes/blog/LLMs#llm-stages" class="hash-link" aria-label="Direct link to LLM Stages" title="Direct link to LLM Stages">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/LLMStages-06471d6394274a0d19817631655f824d.png" width="2176" height="801" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="https://qubitai.in/notes/blog/LLMs#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h2>
 <p>Here are the some of the components used by DeepSeek</p>
 <blockquote>
@@ -46,7 +48,12 @@
 <blockquote>
 <p>GPU Optimization via PTX</p>
 </blockquote>
-<p><img decoding="async" loading="lazy" alt="Overview" src="https://qubitai.in/notes/assets/images/LLMWorkflow-d4f0ce533895987ae32d8dfe85ec1041.png" width="1263" height="431" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Overview" src="https://qubitai.in/notes/assets/images/Llmdetails-e30fa8dc772175b7f06236e7c803e567.png" width="1374" height="474" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="simple-transformers-and-attention">Simple Transformers and Attention<a href="https://qubitai.in/notes/blog/LLMs#simple-transformers-and-attention" class="hash-link" aria-label="Direct link to Simple Transformers and Attention" title="Direct link to Simple Transformers and Attention">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/simpleTransormers-1174510bc910d964e168a971afec2da6.png" width="1744" height="1274" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/selfAttention%20-cc2f12195e657760a022455bbee60e92.png" width="2018" height="654" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="autoregression-models">Autoregression Models<a href="https://qubitai.in/notes/blog/LLMs#autoregression-models" class="hash-link" aria-label="Direct link to Autoregression Models" title="Direct link to Autoregression Models">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/AutoregressiveModel-f0dbb84cb046fff007f57d2e6244cc46.png" width="1587" height="721" class="img_ev3q"></p>
 <h1>Conclusion</h1>
 <p>This blog series <strong>(converted from my research notes)</strong> will provide a glimpse into the architecture and optimization of DeepSeek's LLMs, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology.</p>
 <p>Enjoy your reading!</p>
