@@ -15,7 +15,7 @@
             <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Large Language Models]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="large-language-models">Large Language Models<a href="https://qubitai.in/notes/blog/LLMs#large-language-models" class="hash-link" aria-label="Direct link to Large Language Models" title="Direct link to Large Language Models">​</a></h2>
-<p>OpenAI has been at the forefront of developing sophisticated LLMs, often perceived as black boxes. 1  Until DeepSeek's open-source release, that is. Now, we have a unique opportunity to peek behind the curtain. In this series of articles, I have tried to delve into the inner workings of DeepSeek's LLMs, covering their architecture, optimization techniques. Here are some of my notes exploring their research papers.</p>
+<p>OpenAI has been at the forefront of developing sophisticated LLMs, often perceived as black boxes. Until DeepSeek's open-source release, that is. Now, we have a unique opportunity to peek behind the curtain. In this series of articles, I will delve into the inner workings of DeepSeek's LLMs, starting with the basics before moving on to more advanced topics, covering their architecture and optimization techniques. Here are some of my notes exploring their research papers.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="background">Background<a href="https://qubitai.in/notes/blog/LLMs#background" class="hash-link" aria-label="Direct link to Background" title="Direct link to Background">​</a></h2>
 <p>DeepSeek has emerged as a significant disruptor in the AI industry, particularly in the realm of large language models (LLMs). It gained recognition for achieving high-level AI performance while utilizing significantly fewer computational resources compared to industry giants like OpenAI.</p>
@@ -26,12 +26,22 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-motivation">My Motivation<a href="https://qubitai.in/notes/blog/LLMs#my-motivation" class="hash-link" aria-label="Direct link to My Motivation" title="Direct link to My Motivation">​</a></h2>
 <p>DeepSeek's achievement, building a powerful model with optimized resources, resonates deeply. It's a testament to human ingenuity, a reminder that constraints often spark the most innovative solutions. When faced with limitations, we have an incredible ability to find efficient, impactful pathways forward.</p>
 <blockquote>
-<p><em>We've always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to reach for the stars, to make the unknown known. We count these moments as our proudest achievements. But we lost all that. Or perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, because our destiny lies above us.</em></p>
+<p><em>We've always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to reach for the stars, to make the unknown known. We count these moments as our proudest achievements. But we lost all that. Or perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, because our destiny lies above us.</em>
+<strong>- Cooper, (Movie - Interstellar)</strong></p>
 </blockquote>
-<p><strong>Cooper, (Movie - Interstellar)</strong></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="llm-stages">LLM Stages<a href="https://qubitai.in/notes/blog/LLMs#llm-stages" class="hash-link" aria-label="Direct link to LLM Stages" title="Direct link to LLM Stages">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="llm-basics">LLM Basics<a href="https://qubitai.in/notes/blog/LLMs#llm-basics" class="hash-link" aria-label="Direct link to LLM Basics" title="Direct link to LLM Basics">​</a></h2>
+<p>Here's the general overview of LLMs</p>
+<p><img decoding="async" loading="lazy" alt="Journey" src="https://qubitai.in/notes/assets/images/Llmjourney-1bc92415fe64fc2bce5bb6336923aae2.png" width="2136" height="1374" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="llm-stages">LLM Stages<a href="https://qubitai.in/notes/blog/LLMs#llm-stages" class="hash-link" aria-label="Direct link to LLM Stages" title="Direct link to LLM Stages">​</a></h3>
+<p>It is important for us to understand the LLM stages, I will go through each one in detail.</p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/LLMStages-06471d6394274a0d19817631655f824d.png" width="2176" height="801" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="https://qubitai.in/notes/blog/LLMs#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simple-transformers-and-attention">Simple Transformers and Attention<a href="https://qubitai.in/notes/blog/LLMs#simple-transformers-and-attention" class="hash-link" aria-label="Direct link to Simple Transformers and Attention" title="Direct link to Simple Transformers and Attention">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/simpleTransormers-1174510bc910d964e168a971afec2da6.png" width="1744" height="1274" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/selfAttention%20-cc2f12195e657760a022455bbee60e92.png" width="2018" height="654" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="autoregression-models">Autoregression Models<a href="https://qubitai.in/notes/blog/LLMs#autoregression-models" class="hash-link" aria-label="Direct link to Autoregression Models" title="Direct link to Autoregression Models">​</a></h3>
+<p>The pretraining stage uses autoregressive model. The output of the model is fed as the input to the model. More on this later.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/AutoregressiveModel-f0dbb84cb046fff007f57d2e6244cc46.png" width="1587" height="721" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deepseeks-archictecure">DeepSeek's Archictecure<a href="https://qubitai.in/notes/blog/LLMs#deepseeks-archictecure" class="hash-link" aria-label="Direct link to DeepSeek's Archictecure" title="Direct link to DeepSeek's Archictecure">​</a></h2>
 <p>Here are the some of the components used by DeepSeek</p>
 <blockquote>
 <p>Multi-Head Latent Attention</p>
@@ -49,13 +59,8 @@
 <p>GPU Optimization via PTX</p>
 </blockquote>
 <p><img decoding="async" loading="lazy" alt="Overview" src="https://qubitai.in/notes/assets/images/Llmdetails-e30fa8dc772175b7f06236e7c803e567.png" width="1374" height="474" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="simple-transformers-and-attention">Simple Transformers and Attention<a href="https://qubitai.in/notes/blog/LLMs#simple-transformers-and-attention" class="hash-link" aria-label="Direct link to Simple Transformers and Attention" title="Direct link to Simple Transformers and Attention">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/simpleTransormers-1174510bc910d964e168a971afec2da6.png" width="1744" height="1274" class="img_ev3q"></p>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/selfAttention%20-cc2f12195e657760a022455bbee60e92.png" width="2018" height="654" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="autoregression-models">Autoregression Models<a href="https://qubitai.in/notes/blog/LLMs#autoregression-models" class="hash-link" aria-label="Direct link to Autoregression Models" title="Direct link to Autoregression Models">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/AutoregressiveModel-f0dbb84cb046fff007f57d2e6244cc46.png" width="1587" height="721" class="img_ev3q"></p>
 <h1>Conclusion</h1>
-<p>This blog series <strong>(converted from my research notes)</strong> will provide a glimpse into the architecture and optimization of DeepSeek's LLMs, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology.</p>
+<p>This blog series <strong>(converted from my research notes)</strong> will provide a glimpse into the architecture and optimization of foundational LLMs, culminating in a deeper understanding of DeepSeek's architecture, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs, and DeepSeek in particular, is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology.</p>
 <p>Enjoy your reading!</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a href="https://qubitai.in/notes/blog/LLMs#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References">​</a></h2>
 <p><a href="https://arxiv.org/pdf/2501.12948" target="_blank" rel="noopener noreferrer">Reinforcement Learning</a><br>
