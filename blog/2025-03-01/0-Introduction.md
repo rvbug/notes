@@ -14,7 +14,6 @@ OpenAI has been at the forefront of developing sophisticated LLMs, often perceiv
 <!-- truncate -->
 ---
 
-
 ## Background
 DeepSeek has emerged as a significant disruptor in the AI industry, particularly in the realm of large language models (LLMs). It gained recognition for achieving high-level AI performance while utilizing significantly fewer computational resources compared to industry giants like OpenAI. 
 
