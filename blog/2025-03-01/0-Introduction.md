@@ -9,7 +9,7 @@ side_position: 1
 
 
 ## Large Language Models
-OpenAI has been at the forefront of developing sophisticated LLMs, often perceived as black boxes. 1  Until DeepSeek's open-source release, that is. Now, we have a unique opportunity to peek behind the curtain. In this series of articles, I have tried to delve into the inner workings of DeepSeek's LLMs, covering their architecture, optimization techniques. Here are some of my notes exploring their research papers.
+OpenAI has been at the forefront of developing sophisticated LLMs, often perceived as black boxes. Until DeepSeek's open-source release, that is. Now, we have a unique opportunity to peek behind the curtain. In this series of articles, I will delve into the inner workings of DeepSeek's LLMs, starting with the basics before moving on to more advanced topics, covering their architecture and optimization techniques. Here are some of my notes exploring their research papers.
 
 <!-- truncate -->
 ---
@@ -31,15 +31,33 @@ They developed a model much more powerful (or similar) than OpenAI with signific
 DeepSeek's achievement, building a powerful model with optimized resources, resonates deeply. It's a testament to human ingenuity, a reminder that constraints often spark the most innovative solutions. When faced with limitations, we have an incredible ability to find efficient, impactful pathways forward.
 
 
-
 > *We've always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to reach for the stars, to make the unknown known. We count these moments as our proudest achievements. But we lost all that. Or perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, because our destiny lies above us.*
+**- Cooper, (Movie - Interstellar)**
 
-**Cooper, (Movie - Interstellar)**
+## LLM Basics
 
-## LLM Stages
+Here's the general overview of LLMs
+
+![Journey](img/Llmjourney.png)
+
+### LLM Stages
+It is important for us to understand the LLM stages, I will go through each one in detail. 
+
 ![alt text](img/LLMStages.png)
 
-## Components
+### Simple Transformers and Attention
+
+![alt text](img/simpleTransormers.png)
+
+![alt text](<img/selfAttention .png>)
+
+### Autoregression Models
+The pretraining stage uses autoregressive model. The output of the model is fed as the input to the model. More on this later.
+
+![alt text](img/AutoregressiveModel.png)
+
+
+## DeepSeek's Archictecure  
 
 Here are the some of the components used by DeepSeek 
 
@@ -55,22 +73,12 @@ Here are the some of the components used by DeepSeek
 
 ![Overview](img/Llmdetails.png)
 
-## Simple Transformers and Attention
-
-![alt text](img/simpleTransormers.png)
-
-![alt text](<img/selfAttention .png>)
-
-## Autoregression Models
-
-![alt text](img/AutoregressiveModel.png)
-
 
 
 
 # Conclusion
 
-This blog series **(converted from my research notes)** will provide a glimpse into the architecture and optimization of DeepSeek's LLMs, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology. 
+This blog series **(converted from my research notes)** will provide a glimpse into the architecture and optimization of foundational LLMs, culminating in a deeper understanding of DeepSeek's architecture, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs, and DeepSeek in particular, is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology.
 
 Enjoy your reading!
 
