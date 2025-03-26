@@ -48,7 +48,7 @@ It is important for us to understand the LLM stages, I will go through each one 
 
 ![alt text](img/simpleTransormers.png)
 
-![alt text](<img/selfAttention .png>)
+![alt text](<img/selfAttention.png>)
 
 ### Autoregression Models
 The pretraining stage uses autoregressive model. The output of the model is fed as the input to the model. More on this later.
@@ -71,8 +71,6 @@ Here are the some of the components used by DeepSeek
 > GPU Optimization via PTX  
 
 ![Overview](img/Llmdetails.png)
-
-
 
 
 # Conclusion
