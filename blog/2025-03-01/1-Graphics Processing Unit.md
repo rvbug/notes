@@ -5,6 +5,7 @@ authors: [rakesh]
 tags: [ML, LLMs]
 ---
 
+
 # Introduction
 
 In my last blog, I quickly introduced to DeepSeek and some of the components the used. In this blog, we will get down to basics of GPU and specifically NVIDIA GPU architecture, how CUDA programs gets compiled. 
