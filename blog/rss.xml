@@ -31,16 +31,16 @@
 </blockquote>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="llm-basics">LLM Basics<a href="https://qubitai.in/notes/blog/LLMs#llm-basics" class="hash-link" aria-label="Direct link to LLM Basics" title="Direct link to LLM Basics">​</a></h2>
 <p>Here's the general overview of LLMs</p>
-<p><img decoding="async" loading="lazy" alt="Journey" src="https://qubitai.in/notes/assets/images/Llmjourney-1bc92415fe64fc2bce5bb6336923aae2.png" width="2136" height="1374" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Journey" src="https://qubitai.in/notes/assets/images/Llmjourney-8f617f2198d52e495cf02952b38f9772.png" width="2136" height="1374" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="llm-stages">LLM Stages<a href="https://qubitai.in/notes/blog/LLMs#llm-stages" class="hash-link" aria-label="Direct link to LLM Stages" title="Direct link to LLM Stages">​</a></h3>
 <p>It is important for us to understand the LLM stages, I will go through each one in detail.</p>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/LLMStages-06471d6394274a0d19817631655f824d.png" width="2176" height="801" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/LLMStages-5785aed1762b5ff149569d4f53965a01.png" width="2176" height="801" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="simple-transformers-and-attention">Simple Transformers and Attention<a href="https://qubitai.in/notes/blog/LLMs#simple-transformers-and-attention" class="hash-link" aria-label="Direct link to Simple Transformers and Attention" title="Direct link to Simple Transformers and Attention">​</a></h3>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/simpleTransormers-1174510bc910d964e168a971afec2da6.png" width="1744" height="1274" class="img_ev3q"></p>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/selfAttention%20-cc2f12195e657760a022455bbee60e92.png" width="2018" height="654" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/simpleTransormers-b0bfdb7ab1bb9521af306dcf2a7f7ed4.png" width="1744" height="1274" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/selfAttention-34c77bec74e4916d51235d244b150ff8.png" width="2018" height="654" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="autoregression-models">Autoregression Models<a href="https://qubitai.in/notes/blog/LLMs#autoregression-models" class="hash-link" aria-label="Direct link to Autoregression Models" title="Direct link to Autoregression Models">​</a></h3>
 <p>The pretraining stage uses autoregressive model. The output of the model is fed as the input to the model. More on this later.</p>
-<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/AutoregressiveModel-f0dbb84cb046fff007f57d2e6244cc46.png" width="1587" height="721" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/AutoregressiveModel-25b2398f4ff5c0b42e71971ed870856b.png" width="1587" height="721" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="deepseeks-archictecure">DeepSeek's Archictecure<a href="https://qubitai.in/notes/blog/LLMs#deepseeks-archictecure" class="hash-link" aria-label="Direct link to DeepSeek's Archictecure" title="Direct link to DeepSeek's Archictecure">​</a></h2>
 <p>Here are the some of the components used by DeepSeek</p>
 <blockquote>
@@ -58,7 +58,7 @@
 <blockquote>
 <p>GPU Optimization via PTX</p>
 </blockquote>
-<p><img decoding="async" loading="lazy" alt="Overview" src="https://qubitai.in/notes/assets/images/Llmdetails-e30fa8dc772175b7f06236e7c803e567.png" width="1374" height="474" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Overview" src="https://qubitai.in/notes/assets/images/Llmdetails-7253fdb2ca91016b225224a3ae3bdf76.png" width="1374" height="474" class="img_ev3q"></p>
 <h1>Conclusion</h1>
 <p>This blog series <strong>(converted from my research notes)</strong> will provide a glimpse into the architecture and optimization of foundational LLMs, culminating in a deeper understanding of DeepSeek's architecture, equipping you with a solid foundation to embark on your own LLM research. The open sourcing of LLMs, and DeepSeek in particular, is a major step in the democratization of AI. The rapid evolution of these models promises to reshape how we interact with technology.</p>
 <p>Enjoy your reading!</p>
@@ -85,9 +85,9 @@
 <p>The cuda program workflow is as shown below. It starts off with your program which has extension of ".cu". This code can be written in C, C++ or Fortran.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="basic-flow"><em>Basic Flow</em><a href="https://qubitai.in/notes/blog/GPU#basic-flow" class="hash-link" aria-label="Direct link to basic-flow" title="Direct link to basic-flow">​</a></h2>
 <p>This is a very basic flow of a CUDA program.</p>
-<p><img decoding="async" loading="lazy" alt="Cuda Program Overview" src="https://qubitai.in/notes/assets/images/CUDAOverview-ada2088bea7d1a8bcba5618fe53c062d.png" width="2732" height="612" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Cuda Program Overview" src="https://qubitai.in/notes/assets/images/CUDAOverview-dd0ff5ed6a75693172d5c6b552bc351f.png" width="2732" height="612" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="detailed-workflow"><em>Detailed Workflow</em><a href="https://qubitai.in/notes/blog/GPU#detailed-workflow" class="hash-link" aria-label="Direct link to detailed-workflow" title="Direct link to detailed-workflow">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="CUDA Workflow" src="https://qubitai.in/notes/assets/images/CUDAWorkflow-c7c51d1f0b155d9ed0d7b36ca8489bdc.png" width="2537" height="1762" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="CUDA Workflow" src="https://qubitai.in/notes/assets/images/CUDAWorkflow-a3d8c8a98f6b6a03241ec93d73dfbaa8.png" width="2537" height="1762" class="img_ev3q"></p>
 <p>Typically these  programs has both CPU and GPU instructions running on host machine. The CPU piece of code is called the host code and GPU code section is called device code typically which has <strong>global</strong> and <strong>device</strong> function.</p>
 <p>This code is compiled using NVCC compiler separating both the CPU and GPU code. The CPU code uses CPU complier like <code>GCC</code> converting to the object code.</p>
 <p>At the same time the 1st pass of the GPU converts the GPU code is converted to PTX code. This is a low level IR (Intermediate Representation) is then compiled to convert it to device specific code known as SASS code.</p>
@@ -95,7 +95,7 @@
 <p>PTX is an abstraction layer helping code portabiloty between NVIDIA decides. This helps tools and libraries to manupulate code code before GPU execution, an approach whichDeepSeek team did. We will have a separate article going over the PTX.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="structure"><em>Structure</em><a href="https://qubitai.in/notes/blog/GPU#structure" class="hash-link" aria-label="Direct link to structure" title="Direct link to structure">​</a></h2>
 <p>Before we delve deeper into the PTX optimization by DeepSeek, let us first talk about GPU .</p>
-<p><img decoding="async" loading="lazy" alt="GPU Structure" src="https://qubitai.in/notes/assets/images/GPU%20Structure-a83452cba824cb5f6d4769903bf18fb4.png" width="2048" height="1484" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="GPU Structure" src="https://qubitai.in/notes/assets/images/GPU%20Structure-c34127172c8914b1e32b44181c077f3f.png" width="2048" height="1484" class="img_ev3q"></p>
 <p>There are :</p>
 <ol>
 <li>7 Graphic Processing Clusters (GPC)</li>
@@ -118,7 +118,7 @@
 <p><code>84</code> Ray tracing cores</p>
 </blockquote>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="core"><em>Core</em><a href="https://qubitai.in/notes/blog/GPU#core" class="hash-link" aria-label="Direct link to core" title="Direct link to core">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="CUDA Cores" src="https://qubitai.in/notes/assets/images/Cores-32cd03d9c9117c724f585b0c50c8d4e7.png" width="1926" height="1092" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="CUDA Cores" src="https://qubitai.in/notes/assets/images/Cores-319d360ded9b49fe31014f43112d8a48.png" width="1926" height="1092" class="img_ev3q"></p>
 <p>Here are the three cores available in these GPUs</p>
 <ul>
 <li>CUDA Core is used for game and game engines.</li>
@@ -309,6 +309,35 @@ Optimize data layout for shared memory.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a href="https://qubitai.in/notes/blog/DeepSeekPTX#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References">​</a></h2>
 <p><a href="https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf" target="_blank" rel="noopener noreferrer">DeepSeek R1</a><br>
 <a href="https://github.com/deepseek-ai/DeepEP" target="_blank" rel="noopener noreferrer">DeepSeek EP Github</a></p>]]></content:encoded>
+            <category>ML</category>
+            <category>ML Reserach</category>
+        </item>
+        <item>
+            <title><![CDATA[Tokenization]]></title>
+            <link>https://qubitai.in/notes/blog/Tokenizer</link>
+            <guid>https://qubitai.in/notes/blog/Tokenizer</guid>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[What is Tokenizer]]></description>
+            <content:encoded><![CDATA[<p>In building LLMs, the first step is to obtain the input text and pass it through the Tokenizer</p>
+<h1>Tokenizer</h1>
+<p>Steps in Tokenization is as follows</p>
+<p><img decoding="async" loading="lazy" alt="Tokenization" src="https://qubitai.in/notes/assets/images/tokenization-84b99bbcfbde166c43fe4ffe46cc2c9a.png" width="1720" height="644" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-tokenizer">Types of Tokenizer<a href="https://qubitai.in/notes/blog/Tokenizer#types-of-tokenizer" class="hash-link" aria-label="Direct link to Types of Tokenizer" title="Direct link to Types of Tokenizer">​</a></h2>
+<p>Below are three type of Tokenizers available.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/tokenizer-ae00bc46580d95c23e2f3998d6a35dfb.png" width="2398" height="1131" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="byte-pair-encoding-bpe">Byte Pair Encoding (BPE)<a href="https://qubitai.in/notes/blog/Tokenizer#byte-pair-encoding-bpe" class="hash-link" aria-label="Direct link to Byte Pair Encoding (BPE)" title="Direct link to Byte Pair Encoding (BPE)">​</a></h2>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><ul>
+<li>
+<p>Orginally BPE was developed as a compression algorithm.</p>
+</li>
+<li>
+<p>Checkout more details and the example used from <a href="https://en.wikipedia.org/wiki/Byte_pair_encoding" target="_blank" rel="noopener noreferrer"><strong>Wiki</strong></a></p>
+</li>
+</ul></div></div>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/Bpe-87b63a28e01d14a66bd9be25d22fd45f.png" width="1902" height="1414" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="modified-bpe">Modified BPE<a href="https://qubitai.in/notes/blog/Tokenizer#modified-bpe" class="hash-link" aria-label="Direct link to Modified BPE" title="Direct link to Modified BPE">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>In LLM, we use something called <strong><code>Modified Byte Pair Encoding</code></strong>. Used for encoding plain text to tokens</p></div></div>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://qubitai.in/notes/assets/images/ModifiedBPE-ed3fd7fb8aeeb937be137de1b7a8b469.png" width="1949" height="965" class="img_ev3q"></p>]]></content:encoded>
             <category>ML</category>
             <category>ML Reserach</category>
         </item>
