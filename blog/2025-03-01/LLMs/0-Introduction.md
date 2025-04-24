@@ -33,32 +33,29 @@ DeepSeek's achievement, building a powerful model with optimized resources, reso
 > *We've always defined ourselves by the ability to overcome the impossible. And we count these moments. These moments when we dare to aim higher, to break barriers, to reach for the stars, to make the unknown known. We count these moments as our proudest achievements. But we lost all that. Or perhaps we've just forgotten that we are still pioneers. And we've barely begun. And that our greatest accomplishments cannot be behind us, because our destiny lies above us.*
 **- Cooper, (Movie - Interstellar)**
 
-## LLM Basics
+## LLM Architecture
 
-Here's the general overview of LLMs
+Let us see a simple structure of LLM Architecture containing three blocks
 
-![Journey](img/Llmjourney.png)
+1. Input 
+2. Transformer 
+3. Output 
 
-### LLM Stages
-It is important for us to understand the LLM stages, I will go through each one in detail. 
+![LLM Achitecture](img/LLMarch.png)
 
-![alt text](img/LLMStages.png)
+### Input Block
+Input block will process text by tokenizing it and using Embedding layer will create a token embedding. This token embedding layer will be added to positional encoding creating final Input embedding matrix
 
-### Simple Transformers and Attention
 
-![alt text](img/simpleTransormers.png)
+### Output Block
+This is where the next token will be predicted. Output of transformer block is normalized and send it to logist layer where the word with highest probability is choosen.
 
-![alt text](<img/selfAttention.png>)
 
-### Autoregression Models
-The pretraining stage uses autoregressive model. The output of the model is fed as the input to the model. More on this later.
-
-![alt text](img/AutoregressiveModel.png)
-
+### Transformer Block
+All the magic happens here. DeepSeek replaced **`Multi-Head Attention`** with **`Multi-Head Latent Attention`** along with other innovations in the LLM architecture.
 
 ## DeepSeek's Archictecure  
 
-Here are the some of the components used by DeepSeek 
 
 > Multi-Head Latent Attention 
 
@@ -70,7 +67,6 @@ Here are the some of the components used by DeepSeek
 
 > GPU Optimization via PTX  
 
-![Overview](img/Llmdetails.png)
 
 
 # Conclusion
