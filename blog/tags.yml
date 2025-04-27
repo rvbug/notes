@@ -8,10 +8,10 @@ welcome:
   permalink: /welcome
   description: welcome tag description
 
-docusaruas:
-  label: docusaruas
-  permalink: /docusaruas
-  description: introduction
+docusaurus:
+  label: docusaurus
+  permalink: /docusaurus
+  description: Introduction
 
 nix:
   label: nix
@@ -48,7 +48,18 @@ dotfiles:
   permalink: /dotfiles
   description: dotfiles
 
+Quantum Gravity:
+  label: Quantum Gravity
+  permalink: /Quantum-Gravity
+  description: Quantum Gravity
+
+LLMs:
+  label: LLM
+  permalink: /LLM
+  description: Large Language Models
+
+
 Quantum:
-  label: Quantum Computing
-  permalink: /Quantum-Computing
-  description: Quantum Computing
+  label: Quantum
+  permalink: /Quantum
+  description: Quantum
