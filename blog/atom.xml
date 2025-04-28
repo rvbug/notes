@@ -65,7 +65,7 @@
 <p><a href="https://arxiv.org/pdf/2501.12948" target="_blank" rel="noopener noreferrer">Reinforcement Learning</a><br>
 <a href="https://github.com/rvbug/NLP" target="_blank" rel="noopener noreferrer">Roadmap for LLMs</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -131,7 +131,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="https://qubitai.in/notes/blog/GPU#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
 <p>With basic introduction to GPU out of the way. let us move to PTX. See you in my next arcticle.</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -226,7 +226,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://qubitai.in/notes/blog/PTXIntro#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>This article covered the basic syntax of PTX. The next article will focus on how Deepseek could have possibly optimized their PTX code on their H800 NVIDIA GPUs.</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -321,7 +321,7 @@ Optimize data layout for shared memory.</p>
 <p><a href="https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf" target="_blank" rel="noopener noreferrer">DeepSeek R1</a><br>
 <a href="https://github.com/deepseek-ai/DeepEP" target="_blank" rel="noopener noreferrer">DeepSeek EP Github</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -379,7 +379,7 @@ These dense vector representations capture semantic relationships between tokens
 <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> tiktoken</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">tokenizer </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> tiktoken</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">get_encoding</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"o200k_base"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">text_data </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Ecode using BPE via Python"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">encoder_output </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> tokenizer</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">encode</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">text_data</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> allowed_special</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token string" style="color:#e3116c">"&lt;|END|&gt;"</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">print</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">encoder_output</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">decoder_output </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> tokenizer</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">decode</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">encoder_output</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">print</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">decoder_output</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> python3 bpe_example.py</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">## OUTPUT</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># [36, 3056, 2360, 418, 3111, 4493, 26534]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Ecode using BPE via Python</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -509,7 +509,7 @@ This shows why we need multiple perspectives of the input sequence, as a single 
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://qubitai.in/notes/blog/transformers#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>Now that we've established a solid understanding of conventional attention mechanisms, in the next post we'll explore Deepseek's innovative <strong><code>Multihead Latent Attention (MHLA)</code></strong>. This technique represents a significant advancement that improves both computational efficiency and model performance by operating in a more compact latent space. MHLA reduces computational complexity while maintaining or even enhancing the model's ability to capture relationships between tokens, particularly for long sequences. Stay tuned to learn how this optimization technique can be applied to your own language models!</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -618,7 +618,7 @@ This shows why we need multiple perspectives of the input sequence, as a single 
 <p><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a></p>
 <p><a href="https://ocaml.org/" target="_blank" rel="noopener noreferrer">OCaml - Functional Programming Lang</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="dotfiles" term="dotfiles"/>
@@ -734,7 +734,7 @@ This shows why we need multiple perspectives of the input sequence, as a single 
 <p><a href="https://linuxhandbook.com/vim-cheat-sheet/" target="_blank" rel="noopener noreferrer">Vim Cheat Sheet</a></p>
 <p><a href="https://devhints.io/lua" target="_blank" rel="noopener noreferrer">Lua Cheat Sheet</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="IDE" term="IDE"/>
@@ -860,7 +860,7 @@ This shows why we need multiple perspectives of the input sequence, as a single 
 <p><a href="https://en.wikipedia.org/wiki/Post-quantum_cryptography" target="_blank" rel="noopener noreferrer">Post Quantum Cryptography</a></p>
 <p><a href="https://github.com/rvbug/q-gravity/" target="_blank" rel="noopener noreferrer">Quantum Gravity - Github Repo</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="Quantum" term="Quantum"/>
@@ -926,7 +926,7 @@ This shows why we need multiple perspectives of the input sequence, as a single 
 <p><a href="https://rvbug.hashnode.dev/structuring-data-science-and-ml-projects" target="_blank" rel="noopener noreferrer">Automating ML structure (v 1.0)</a></p>
 <p><a href="https://docs.python.org/3/library/venv.html" target="_blank" rel="noopener noreferrer">Documentation on Virtual Env</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -1002,7 +1002,7 @@ This shows why we need multiple perspectives of the input sequence, as a single 
 <p>Kip Thorne is not just a physicist, but a scientific consultant who ensured that "Interstellar" pushed the boundaries of scientific accuracy in cinema. His work bridges theoretical physics with popular understanding.</p>
 <p><em>Disclaimer: While these equations are simplified, they provide a glimpse into the mathematical foundations of these complex cosmic phenomena.</em></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="Quantum Gravity" term="Quantum Gravity"/>
@@ -1067,7 +1067,7 @@ The core of Nix's package management:</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://qubitai.in/notes/blog/Nix%20OS#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>Nix's functional programming syntax provides a unique approach to package management and system configuration, emphasizing reproducibility, purity, and declarative design.</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="nix" term="nix"/>
@@ -1134,7 +1134,7 @@ The core of Nix's package management:</p>
 <li><a href="http://quibitai.in/notes/" target="_blank" rel="noopener noreferrer">Nix Functional Package</a></li>
 </ul>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="nix" term="nix"/>
@@ -1213,7 +1213,7 @@ The core of Nix's package management:</p>
 <h1>References</h1>
 <p>Original Paper - (<a href="https://arxiv.org/abs/2103.01544" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2103.01544</a>)</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML Reserach" term="ML Reserach"/>
@@ -1393,7 +1393,7 @@ The core of Nix's package management:</p>
 <a href="https://kaggle.com/rvbugged/popularity-based" target="_blank" rel="noopener noreferrer">Kaggle - Popularity Based </a></p>
 <p>You can find me on <a href="https://www.linkedin.com/in/idinc/" target="_blank" rel="noopener noreferrer">Linkedln</a> and <a href="https://twitter.com/rvbugged" target="_blank" rel="noopener noreferrer">Twitter</a>.</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -1458,7 +1458,7 @@ The core of Nix's package management:</p>
 <p><a href="https://rvbug.hashnode.dev/structuring-data-science-and-ml-projects" target="_blank" rel="noopener noreferrer">Automating ML structure (v 1.0)</a></p>
 <p><a href="https://docs.python.org/3/library/venv.html" target="_blank" rel="noopener noreferrer">Documentation on Virtual Env</a></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -1512,7 +1512,7 @@ The core of Nix's package management:</p>
 <p>I had done a great deal of experiments before narrowing it down to these processes, so if this article helps you in any way do let me know.</p>
 <p>Happy Learning!!!</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="ML" term="ML"/>
@@ -1648,7 +1648,7 @@ The core of Nix's package management:</p>
 <p>The perfect productivity system evolves with you.</p>
 <p><em>Disclaimer: Personal experience. Results may vary.</em></p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="Notion" term="Notion"/>
@@ -1721,7 +1721,7 @@ The core of Nix's package management:</p>
 <h1>Conclusion</h1>
 <p>Docusaurus provides a modern, efficient solution for creating and maintaining documentation websites. Its combination of ease of use, powerful features, and flexibility makes it an excellent choice for projects of all sizes.</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="docusaurus" term="docusaurus"/>
@@ -1736,7 +1736,7 @@ The core of Nix's package management:</p>
 <p>Dive into various in-depth articles on <strong><code>Machine Learning</code></strong>, <strong><code>Quantum Computing</code></strong>, fascinating architecture of <strong>DeepSeek</strong> and much more.</p>
 <p>Powered by <a href="https://qubitai.in/" target="_blank" rel="noopener noreferrer">QuBiTAi</a> and built with Docusaurus, this platform is your gateway to understanding complex concepts and cutting-edge research.</p>]]></content>
         <author>
-            <name>rakesh</name>
+            <name>Rakesh</name>
             <uri>https://qubitai.in</uri>
         </author>
         <category label="Hello" term="Hello"/>
